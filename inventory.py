@@ -88,22 +88,6 @@ tomato = Item("tomato",10,5,1)
 tomato.print_stats()
 
 
-player.add_item(tomato)
-
-player.add_item(tomato)
-
-player.add_item(tomato)
-
-player.add_item(tomato)
-
-player.add_item(tomato)
-
-
-player.add_item(tomato)
-
-
-player.add_item(tomato)
-
 
 print(player.get_contents())
 
