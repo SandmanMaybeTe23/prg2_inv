@@ -1,3 +1,7 @@
+Min plan var att ha bara några func på som remove_item,add_item,use_item,equip_item och unequip_item.
+Men ochkså några mer parameters skulle var dar men jag bestemde att de gide inte mer än vad redan var tex rarity som jag tykte var väldigt lika som value så jag bästemde att tabort den.
+Några func som inte med på planeringen kom upp under arbetet som att göra en item.    
+     
 i mitt Inv har jag container som är vad alla items går till och de är en lista jag har weight som är hur mycket allt väger som är ett int.
 Func som jag har är get_contents som vi tittar vad som är i container sen har vi get_weight som är att vi se hur mycket allt väger.
 Efter de har har vi add_item som leger in item i container men weight av item addera med Inv weight.
