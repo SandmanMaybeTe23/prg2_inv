@@ -16,26 +16,19 @@ def input_str(prompt):
 
 
 
-def make_item():
-        name_item=input_str("what is this item called")
-        weight_item=input_int(f"how heavy is this {name_item} ")    
-        value_item=input_int(f"how valuable is the {name_item}")
-        amount_item=input_int(f"how much of this {name_item} do you have")
-
-        name_item
-        return 
-        
 
 class Inv():
     def __init__(self):
         self.container = []
         self.weight= 0
 
+
     def get_contents(self):
         item=[]
         for i in self.container:
             item.append(i.name)
         return  item
+
 
     def get_weight(self):
         return self.weight
@@ -52,15 +45,33 @@ class Inv():
     def remove_item(self,item):
         self.container.remove(item)
         self.weight -= item["weight"]
+    
+    def equip_item(self):
+        pass
 
+
+    def unequip_item(self):
+        pass
+
+    def use_item(self,item):
+        if item.useable==1:
+            item.amount-=1
+            if item.amount<=0:
+                print(f"{item.name} has been removed")
+                self.container.remove(item)
+                self.weight-=item.weight
+        else:
+            print("this item can't be used")
 
 
 class Item():
-    def __init__(self,name,weight,value,amount):
+    def __init__(self, name:str, weight:int, value:int, amount:int, useable:int):
         self.name=name
         self.weight=weight
         self.value=value
         self.amount=amount
+        self.useable=useable
+
 
 
     def print_stats(self):
@@ -74,6 +85,7 @@ class Item():
         self.weight=input_int(f"how heavy is this {self.name} ")    
         self.value=input_int(f"how valuable is the {self.name}")
         self.amount=input_int(f"how much of this {self.name} do you have")
+        self.useable=input_int(f"is this {self.name} usable press [1] for yess or press[0] for nOO ")
 
 
 
@@ -81,13 +93,22 @@ class Item():
 player = Inv()
 
 
-tomato = Item("tomato",10,5,1)
+tomato = Item("tomato",10,5,1,1)
 
+lead_thrower=Item("thrower",10,50,1,0)
 
 
 tomato.print_stats()
 
+player.add_item(tomato)
 
+print(player.get_contents())
+
+
+
+
+
+player.use_item(tomato)
 
 print(player.get_contents())
 
@@ -97,7 +118,7 @@ print(player.get_weight())
 
 while True :
     
-    new_item= Item(None,None,None,None)
+    new_item= Item(None,None,None,None,None)
 
     new_item.make_item()
 

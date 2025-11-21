@@ -1,0 +1,15 @@
+i mitt Inv har jag container som är vad alla items går till och de är en lista jag har weight som är hur mycket allt väger som är ett int.
+Func som jag har är get_contents som vi tittar vad som är i container sen har vi get_weight som är att vi se hur mycket allt väger.
+Efter de har har vi add_item som leger in item i container men weight av item addera med Inv weight.
+Men då har vi också remove_item som tarbort item och weight från Inv.
+Jag tänkte har Unequip och equip men han inte men jag tänker att jag skulle ha en lista eller en variable för att fungera men jag har inte tänkt mer om de.
+Men jag han med att man kan använa items typ som att ätta med use_item som man tarbort en mängden item och om den är lika med eller mindre än nol så går den bort från container.
+
+Den andra classen är Item som håller koll på alla parametar som namn,weight,value,amount och om den är useable.
+De är hur till exemple hur func som add_item kan få weight från items och mer func i Inv.
+Men några func som jag har är print_stats som vissar allt parametar värden på ett item. 
+De sista saken som jag har gjort med Item är make_item som gör items och den gör de frå dina svar på den frågror som den kan fårgar om alla parameters.
+
+Sennar i min kod kan du see hur de hara fungera.
+
+
